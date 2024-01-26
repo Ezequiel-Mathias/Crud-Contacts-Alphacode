@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer type="module"></script>
+    <script src="./utils/Validation.js" defer type="module"></script>
+    <script src="./service/index.js" defer type="module"></script>
+    <title>Cadastro de contatos</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navmenu">
+            <figure class="navmenu__figure">
+                <img src="./img/logo_alphacode.png" alt="logo alphacode">
+                <h1 class="navmenu--text">Cadastro de contatos</h1>
+            </figure>
+        </nav>
+    </header>
+
+    <main>
+        <form id="modal-form">
+            <section class="data-filling">
+
+                <section>
+                    <p>Nome completo</p>
+                    <input data-index="new" id="name" type="text" placeholder="Ex.: Ezequiel Mathias Oliveira Pereira"
+                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" required>
+                    <p>E-mail</p>
+                    <input id="email" type="email" placeholder="Ex.: ezequielmathias32@gmail.com"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$"
+                        required>
+                    <p>Telefone para contato</p>
+                    <input id="phone" type="text" placeholder="Ex.:(11) 4033-2019"
+                        pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required>
+                </section>
+
+                <section>
+                    <p>Data de nascimento</p>
+                    <input id="birthday-date" type="date" required>
+                    <p>Profissão</p>
+                    <input id="profession" type="text" placeholder="Ex.:Desenvolvedor Web" required>
+                    <p>Celular para contato</p>
+                    <input id="cellphone" type="text" placeholder="Ex.: (11) 91049-5559" required>
+                </section>
+
+            </section>
+
+            <section class="receive-contact">
+
+                <section>
+
+                    <div class="receive-contact__checkbox">
+                        <input type="checkbox" id="checked-whatsapp">
+                        <p>Número de celular possui Whatsapp</p>
+                    </div>
+
+                    <div class="receive-contact__checkbox">
+                        <input type="checkbox" id="checked-sms">
+                        <p>Enviar notificações por SMS</p>
+                    </div>
+
+                </section>
+
+                <section>
+
+                    <div class="receive-contact__checkbox">
+                        <input type="checkbox" id="checked-email">
+                        <p>Enviar notificações por E-mail</p>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <section class="register-contact">
+
+                <div id="register-contact__button">
+                    Cadastrar contato
+                </div>
+
+            </section>
+
+            <section id="table-contacts">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th class="table-contacts__content">Nome</th>
+                            <th class="table-contacts__content">Data de nascimento</th>
+                            <th class="table-contacts__content">E-mail</th>
+                            <th class="table-contacts__content">Celular para contato</th>
+                            <th class="table-contacts__actions">Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <span>Termos | Políticas</span>
+        <div class="copyright">
+            <span>Copyright 2022 | Desenvolvido por </span>
+            <img src="./img/logo_rodape_alphacode.png" alt="">
+        </div>
+        <span>Alphacode IT Solutions 2023</span>
+    </footer>
+
+</body>
+
+</html>
