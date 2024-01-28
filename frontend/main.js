@@ -73,23 +73,21 @@ const powerDataContacts = async () => {
             if (!createVereficationEmail && !createVereficationCellphone) {
                 clearRowsTable();
                 createContact(dataContact);
-                location.reload();
             }
 
         } else {
-            const updateVereficationEmail = await existingEmailVerificationUpdate(index , email);
-            const updateVereficationCellphone = await existingCellphoneVerificationUpdate(index , cellphone);
+            const updateVereficationEmail = await existingEmailVerificationUpdate(index, email);
+            const updateVereficationCellphone = await existingCellphoneVerificationUpdate(index, cellphone);
 
             if (!updateVereficationEmail && !updateVereficationCellphone) {
                 clearRowsTable();
                 updateContact(index, dataContact);
-                location.reload();
             }
         }
     }
 }
 
-const fillInInputs = ({ name, birthday_date, email, profession, cellphone, phone, id }) => {
+const fillInInputs = ({ name, birthday_date, email, profession, cellphone, phone, id, have_whatsapp, permission_send_email, permission_send_sms }) => {
 
     document.getElementById('name').value = name
     document.getElementById('birthday-date').value = birthday_date
@@ -97,6 +95,9 @@ const fillInInputs = ({ name, birthday_date, email, profession, cellphone, phone
     document.getElementById('profession').value = profession
     document.getElementById('phone').value = phone
     document.getElementById('cellphone').value = cellphone
+    document.getElementById('checked-whatsapp').checked = have_whatsapp == 1 ? true : false
+    document.getElementById('checked-sms').checked = permission_send_sms == 1 ? true : false
+    document.getElementById('checked-email').checked = permission_send_email == 1 ? true : false
     document.getElementById('name').dataset.index = id
 
 }
@@ -131,17 +132,20 @@ const choiceOfActionTable = async (event) => {
 
         const [action, index] = event.target.id.split('-');
 
-        if (action == 'edit') {
-
+        if (action == 'edit')
             editContact(index)
+        else {
+            const teste = confirm("Deseja realmente excluir esse contato ?")
 
-        } else {
-            clearRowsTable();
-            deleteContact(index);
-
+            if (teste) {
+                clearRowsTable();
+                deleteContact(index);
+            } else
+                return
 
         }
     }
+
 }
 
 document.getElementById('register-contact__button').addEventListener('click', powerDataContacts);

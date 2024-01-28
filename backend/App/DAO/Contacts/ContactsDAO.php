@@ -18,7 +18,13 @@ class ContactsDAO extends Conexao
     {
 
         $contacts = $this->pdo
-            ->query('SELECT * FROM contacts;')
+            ->query("SELECT id , name , DATE_FORMAT (`birthday_date`,
+            '%d/%m/%Y'
+            ) 
+            AS 
+            `birthday_date` ,email , profession , cellphone, have_whatsapp, permission_send_email, permission_send_sms , created_in 
+            FROM 
+            `contacts`;")
             ->fetchAll(\PDO::FETCH_ASSOC);
 
         return $contacts;

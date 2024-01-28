@@ -1,6 +1,6 @@
 'use strict'
 
-import { confirmEmailCreate, confirmEmailUpdate , confirmCellphoneCreate, confirmCellphoneUpdate } from "../service/index.js";
+import { confirmEmailCreate, confirmEmailUpdate, confirmCellphoneCreate, confirmCellphoneUpdate } from "../service/index.js";
 
 const cellphone = document.getElementById("cellphone");
 
@@ -8,7 +8,7 @@ const phone = document.getElementById("phone");
 
 cellphone.addEventListener("input", () => {
 
-    var clearValue = cellphone.value.replace(/\D/g, "").substring(0, 12);
+    var clearValue = cellphone.value.replace(/\D/g, "").substring(0, 11);
 
     var numberArray = clearValue.split("");
 
@@ -79,7 +79,7 @@ const fieldValidation = () => {
 }
 
 const existingEmailVerificationCreate = async (email) => {
-    
+
     const data = {
         email: email
     }
@@ -94,8 +94,8 @@ const existingEmailVerificationCreate = async (email) => {
     return false
 }
 
-const existingEmailVerificationUpdate = async (idContact , email) => {
-    
+const existingEmailVerificationUpdate = async (idContact, email) => {
+
     const data = {
         id: idContact,
         email: email
@@ -112,7 +112,7 @@ const existingEmailVerificationUpdate = async (idContact , email) => {
 }
 
 const existingCellphoneVerificationCreate = async (cellphone) => {
-    
+
     const data = {
         cellphone: cellphone
     }
@@ -127,8 +127,8 @@ const existingCellphoneVerificationCreate = async (cellphone) => {
     return false
 }
 
-const existingCellphoneVerificationUpdate = async (idContact , cellphone) => {
-    
+const existingCellphoneVerificationUpdate = async (idContact, cellphone) => {
+
     const data = {
         id: idContact,
         cellphone: cellphone

@@ -28,8 +28,8 @@ const createContact = async (contact) => {
 
     const response = await fetch(`${baseUrl}/contacts`, option);
 
-    if (response.ok) 
-        console.log('POST', response.ok)
+    if (response.ok)
+        location.reload();
 }
 
 
@@ -45,8 +45,8 @@ const updateContact = async (index, dataContact) => {
 
     const response = await fetch(`${baseUrl}/contacts/${index}`, option);
 
-    if (response.ok) 
-        console.log('UPDATE' , response.ok)
+    if (response.ok)
+        location.reload();
 
 }
 
@@ -58,11 +58,11 @@ const deleteContact = async (index) => {
 
     const response = await fetch(`${baseUrl}/contacts/${index}`, option);
 
-    if (response.ok){
+    if (response.ok) {
         location.reload();
-    } 
-        
-    
+    }
+
+
 
 }
 
