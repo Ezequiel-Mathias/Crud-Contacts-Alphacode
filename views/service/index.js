@@ -1,6 +1,6 @@
 'use strict'
 
-const baseUrl = 'http://localhost/crud-contacts-alphacode/';
+const baseUrl = 'http://localhost/crud-contacts-alphacode';
 
 const getContacts = async () => {
 
