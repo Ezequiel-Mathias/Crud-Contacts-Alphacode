@@ -111,6 +111,25 @@
     border-top: solid 1px var(--gray);
 }
 
+#table-contacts #scroll-table {
+    overflow-y: scroll;
+    height: 390px;
+}
+
+#scroll-table::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+#scroll-table::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#scroll-table::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 20px;
+}
+
 #table-contacts table,
 th,
 td {
@@ -120,7 +139,7 @@ td {
 }
 
 #table-contacts table {
-    width: 1500px;
+    width: clamp( 70rem , 100vw , 93.75rem);
 }
 
 #table-contacts table th {

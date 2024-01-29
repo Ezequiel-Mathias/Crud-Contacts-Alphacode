@@ -27,7 +27,7 @@ const createRows = ({ name, birthday_date, email, cellphone, id }) => {
     </td>
     `;
 
-    document.querySelector('#table-contacts>table>tbody').appendChild(newRow)
+    document.querySelector('#table-contacts>#scroll-table>table>tbody').appendChild(newRow)
 
 }
 
@@ -150,4 +150,4 @@ const choiceOfActionTable = async (event) => {
 
 document.getElementById('register-contact__button').addEventListener('click', powerDataContacts);
 
-document.querySelector('#table-contacts>table>tbody').addEventListener('click', choiceOfActionTable);
+document.querySelector('#table-contacts>#scroll-table>table>tbody').addEventListener('click', choiceOfActionTable);
