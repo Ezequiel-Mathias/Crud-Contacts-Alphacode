@@ -20,7 +20,7 @@ Para ajudá-lo a configurar seu arquivo env.php, consulte o exemplo fornecido em
 ### 4 - Startar o servidor apache no xampp:
 Entre no xampp e faça a inicialização do servidor apache.
 
-### 5 - Acesse a aplicação:
+### 5 - Acesse a pagina web:
 Acesse a aplicação no respectivo link: 
 
 
