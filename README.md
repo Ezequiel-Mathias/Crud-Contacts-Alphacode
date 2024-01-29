@@ -14,10 +14,10 @@ Clone o repositório dentro do diretório <code>htdocs</code> respectivo ao xamm
 A estrutura necessária está disponível no arquivo <code>structure.sql</code> fazer a importação no <code>Mysql</code>.
 
 ### 3 - Instalar dependências:
-Pelo cmd entre na pasta backend e execute o seguinte comando para instalar as dependências necessárias: <code>composer i</code>
+Na raiz do projeto execute o seguinte comando para instalar as dependências necessárias: <code>composer i</code>
 
 ### 4 - Configuração do ambiente:
-Crie um arquivo chamado <code>env.php</code> na raiz da pasta denominada backend.
+Crie um arquivo chamado <code>env.php</code> na raiz do projeto.
 Para ajudá-lo a configurar seu arquivo <code>env.php</code>, consulte o exemplo fornecido em <code>env.example.php</code>.
 
 ### 5 - Acesse a pagina web:
