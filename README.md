@@ -21,6 +21,6 @@ Para ajudá-lo a configurar seu arquivo <code>env.php</code>, consulte o exemplo
 Entre no xampp e faça a inicialização do servidor apache.
 
 ### 5 - Acesse a pagina web:
-Acesse a aplicação clicando <a href="https://crud-contacts-alphacode.vercel.app/">aqui!</a>
+Acesse a aplicação web <a href="https://crud-contacts-alphacode.vercel.app/">clicando aqui!</a>
 
 
