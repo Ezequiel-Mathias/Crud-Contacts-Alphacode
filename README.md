@@ -15,7 +15,7 @@ Pelo cmd entre na pasta backend e execute o seguinte comando para instalar as de
 
 ### 3 - Configuração do ambiente:
 Crie um arquivo chamado <code>env.php</code> na raiz da pasta denominada backend.
-Para ajudá-lo a configurar seu arquivo env.php, consulte o exemplo fornecido em env.example.php.
+Para ajudá-lo a configurar seu arquivo <code>env.php</code>, consulte o exemplo fornecido em <code>env.example.php</code>.
 
 ### 4 - Startar o servidor apache no xampp:
 Entre no xampp e faça a inicialização do servidor apache.
